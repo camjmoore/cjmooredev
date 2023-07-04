@@ -18,9 +18,9 @@ export async function getProjects() {
   //content
 
   return client.fetch(
-    groq`*[_type == "project" ]{
+    groq`*[_type == "project"]{
       _id,
-      _createdAt
+      _createdAt,
       name,
       "slug": slug.current,
       "image": image.asset->url,
