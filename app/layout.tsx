@@ -1,4 +1,5 @@
 import "./globals.css";
+import NavBar from "./nav-bar";
 
 export const metadata = {
   title: "Create Next App",
@@ -13,7 +14,8 @@ export default function RootLayout({
   return (
     <html className="bg-noise-bg" lang="en">
       <body className="bg-gradient-to-b from-sky-950 to-slate-900 opacity-95 min-h-screen">
-        {children}
+        <NavBar />
+        <div>{children}</div>
       </body>
     </html>
   );
