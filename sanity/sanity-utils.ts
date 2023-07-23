@@ -49,3 +49,18 @@ export async function getPosts(): Promise<Post[]> {
     }`
   );
 }
+
+export async function getPost(slug: string): Promise<Post> {
+  const client = createClient(config);
+
+  return client.fetch(
+    groq`*[_type == "post" && slug.current == $slug][0]{
+      _id,
+      _createdAt,
+      name,
+      "slug": slug.current,
+      content
+    }`,
+    { slug }
+  );
+}
