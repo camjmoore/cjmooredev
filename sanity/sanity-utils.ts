@@ -1,12 +1,10 @@
+import { Post } from "@/types/Post";
 import { Project } from "@/types/Project";
+import config from "./client-config";
 import { createClient, groq } from "next-sanity";
 
 export async function getProjects(): Promise<Project[]> {
-  const client = createClient({
-    projectId: "s7ponpx3",
-    dataset: "production",
-    apiVersion: "2023-02-07",
-  });
+  const client = createClient(config);
 
   //for all types that match projects
   //return
@@ -26,6 +24,20 @@ export async function getProjects(): Promise<Project[]> {
       "slug": slug.current,
       "image": image.asset->url,
       url,
+      content
+    }`
+  );
+}
+
+export async function getPosts(): Promise<Post[]> {
+  const client = createClient(config);
+
+  return client.fetch(
+    groq`*[_type == "post"]{
+      _id,
+      _createdAt,
+      name,
+      "slug": slug.current,
       content
     }`
   );
