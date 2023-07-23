@@ -1,4 +1,5 @@
 import { getProjects } from "../../sanity/sanity-utils";
+import Link from "next/link";
 
 export default async function Home() {
   //instead of using getStaticPaths and getStaticProps to run getProjects and handle the data
@@ -9,7 +10,9 @@ export default async function Home() {
   return (
     <div>
       {projects.map((project) => (
-        <div key={project._id}>{project.name}</div>
+        <Link href={`/projects/${project.slug}`} key={project._id}>
+          {project.name}
+        </Link>
       ))}
     </div>
   );
