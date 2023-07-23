@@ -1,9 +1,21 @@
-type Props = { params: { project: string } };
+import { getPost } from "../../../sanity/sanity-utils";
+import { PortableText } from "@portabletext/react";
+
+type Props = { params: { post: string } };
 
 export default async function Post({ params }: Props) {
-  const slug = params.project;
+  const slug = params.post;
 
-  const project = await getPost(slug);
+  const post = await getPost(slug);
 
-  return <div>This Post</div>;
+  return (
+    <div>
+      <header>
+        <h1>{post.name}</h1>
+      </header>
+      <div>
+        <PortableText value={post.content} />
+      </div>
+    </div>
+  );
 }
