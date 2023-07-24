@@ -1,4 +1,5 @@
 import "../globals.css";
+import Header from "../header";
 import NavBar from "../nav-bar";
 
 export const metadata = {
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html className="bg-noise-bg" lang="en">
       <body className="bg-gradient-to-b from-[#001B26] to-slate-900 opacity-95 min-h-screen">
         <NavBar />
+        <Header />
         <div>{children}</div>
       </body>
     </html>
