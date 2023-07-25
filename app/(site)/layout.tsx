@@ -13,8 +13,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className="bg-noise-bg" lang="en">
-      <body className="bg-gradient-to-b from-[#001B26] to-slate-900 opacity-95 min-h-screen">
+    <html
+      className="bg-gradient-to-b from-[#001B26] to-slate-900 opacity-80 min-h-screen"
+      lang="en"
+    >
+      <body className="bg-spectrum bg-bottom">
         <Nav />
         <Header />
         <div>{children}</div>
