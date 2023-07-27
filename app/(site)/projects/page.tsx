@@ -1,4 +1,5 @@
 import { getProjects } from "@/sanity/sanity-utils";
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function Home() {
@@ -8,10 +9,23 @@ export default async function Home() {
   const projects = await getProjects();
 
   return (
-    <div>
+    <div className="mx-auto mt-5 grid grid-cols-2 gap-4">
       {projects.map((project) => (
-        <Link href={`/projects/${project.slug}`} key={project._id}>
-          {project.name}
+        <Link
+          href={`/projects/${project.slug}`}
+          key={project._id}
+          className="rounded-lg border border-gray-500"
+        >
+          {project.image && (
+            <Image
+              src={project.image}
+              alt={project.name}
+              width={250}
+              height={200}
+              className="object-cover rounded-lg border border-gray-500"
+            />
+          )}
+          <div>{project.name}</div>
         </Link>
       ))}
     </div>
