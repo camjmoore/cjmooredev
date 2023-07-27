@@ -9,7 +9,7 @@ export default async function Home() {
   const projects = await getProjects();
 
   return (
-    <div className="mx-auto mt-5 grid grid-cols-2 gap-4">
+    <div className="mx-auto mt-5 grid grid-cols-3 gap-4">
       {projects.map((project) => (
         <Link
           href={`/projects/${project.slug}`}
