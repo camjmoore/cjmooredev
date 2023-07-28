@@ -11,14 +11,15 @@ export default function About() {
             Front-End Developer | Full-Stack Interloper
           </p>
         </div>
-        <Image
-          src="/headshot.png"
-          alt="a headshot photo of the next dev you plan to hire"
-          quality={50}
-          width={100}
-          height={100}
-          className="items-center rounded-full border border-zinc-400"
-        />
+        <div className="h-24 w-24 overflow-hidden items-center rounded-full border border-zinc-400">
+          <Image
+            src="/headshot.png"
+            alt="a headshot photo of the next dev you plan to hire"
+            quality={50}
+            width={100}
+            height={100}
+          />
+        </div>
       </section>
     </div>
   );
