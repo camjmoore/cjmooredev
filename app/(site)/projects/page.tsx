@@ -9,7 +9,7 @@ export default async function Home() {
   const projects = await getProjects();
 
   return (
-    <div className="mx-auto mt-5 grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
       {projects.map((project) => (
         <Link
           href={`/projects/${project.slug}`}
@@ -22,7 +22,7 @@ export default async function Home() {
               alt={project.name}
               width={250}
               height={200}
-              className="object-cover rounded-lg border border-gray-500"
+              className="overflow-hidden rounded-lg border border-gray-500"
             />
           )}
           <div>{project.name}</div>
