@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      className="bg-gradient-to-b from-[#001B26] to-slate-900 opacity-80 min-h-screen"
+      className="bg-gradient-to-b from-[#001B26] to-slate-900 opacity-95 min-h-screen"
       lang="en"
     >
       <body className="bg-no-repeat bg-spectrum bg-top min-h-screen">
