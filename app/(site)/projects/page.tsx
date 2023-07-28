@@ -14,10 +14,10 @@ export default async function Home() {
         <Link
           href={`/projects/${project.slug}`}
           key={project._id}
-          className="overflow-hidden w-60 h-72 rounded-lg border border-gray-500"
+          className="mx-auto w-60 h-72 overflow-hidden rounded-lg border border-gray-500"
         >
           {project.image && (
-            <div className="mx-auto overflow-hidden max-w-fit h-52">
+            <div className="max-w-fit h-52 overflow-hidden">
               <Image
                 src={project.image}
                 alt={project.name}
