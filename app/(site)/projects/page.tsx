@@ -14,16 +14,17 @@ export default async function Home() {
         <Link
           href={`/projects/${project.slug}`}
           key={project._id}
-          className="rounded-lg border border-gray-500"
+          className="overflow-hidden w-60 h-72 rounded-lg border border-gray-500"
         >
           {project.image && (
-            <Image
-              src={project.image}
-              alt={project.name}
-              width={250}
-              height={200}
-              className="overflow-hidden rounded-lg border border-gray-500"
-            />
+            <div className="mx-auto overflow-hidden max-w-fit h-52">
+              <Image
+                src={project.image}
+                alt={project.name}
+                width={250}
+                height={200}
+              />
+            </div>
           )}
           <div>{project.name}</div>
         </Link>
