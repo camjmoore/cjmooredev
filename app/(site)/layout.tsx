@@ -17,7 +17,7 @@ export default function RootLayout({
       className="bg-gradient-to-b from-[#001B26] to-slate-900 opacity-80 min-h-screen"
       lang="en"
     >
-      <body className="bg-spectrum bg-bottom">
+      <body className="bg-no-repeat bg-spectrum bg-top min-h-screen">
         <Nav />
         <Header />
         <div className="sm:mt-32 sm:px-8">
