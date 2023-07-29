@@ -45,7 +45,8 @@ export async function getPosts(): Promise<Post[]> {
       _createdAt,
       name,
       "slug": slug.current,
-      content
+      content,
+      tags
     }`
   );
 }
@@ -59,7 +60,8 @@ export async function getPost(slug: string): Promise<Post> {
       _createdAt,
       name,
       "slug": slug.current,
-      content
+      content,
+      tags
     }`,
     { slug }
   );
