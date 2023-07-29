@@ -20,6 +20,13 @@ const post = {
       type: "array",
       of: [{ type: "block" }],
     },
+    {
+      name: "tags",
+      title: "Tags",
+      type: "array",
+      of: [{type: "string"}],
+      options: { layout: "tags" },
+    }
   ],
 };
 
