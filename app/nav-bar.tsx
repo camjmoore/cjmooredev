@@ -7,10 +7,10 @@ export default function Nav() {
   const pathname = usePathname();
 
   const menu = [
-    { name: "about", href: "/about" },
-    { name: "projects", href: "/projects" },
-    { name: "posts", href: "/posts" },
-    { name: "contact", href: "/contact" },
+    { name: "About", href: "/about" },
+    { name: "Projects", href: "/projects" },
+    { name: "Posts", href: "/posts" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -26,8 +26,8 @@ export default function Nav() {
                 key={link.name}
                 className={
                   isActive
-                    ? "relative block px-3 py-2 transition text-orange-400"
-                    : "relative block px-3 py-2 transition hover:text-orange-400"
+                    ? "relative block px-3 py-2.5 transition text-orange-400"
+                    : "relative block px-3 py-2.5 transition hover:text-orange-400"
                 }
               >
                 {link.name}
