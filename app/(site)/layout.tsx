@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className="bg-no-repeat bg-spectrum bg-top min-h-screen">
         <Nav />
         <Header />
-        <div className="sm:mt-32 sm:px-8">
+        <div className="sm:px-8">
           <div className="mx-auto max-w-7xl lg:px-12">
             <div className="relative px-4 sm:px-8 lg:px-12">
               <div className="mx-auto max-w-2xl lg:max-w-5xl">{children}</div>
