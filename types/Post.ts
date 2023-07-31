@@ -6,4 +6,5 @@ export type Post = {
   name: string;
   slug: string;
   content: PortableTextBlock[];
+  tags: string[];
 };
