@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  background: #001b26;
+@layer base {
+  html {
+    background: #001b26;
+    color: white;
+  }
+
+  h1 {
+    @apply text-4xl;
+    @apply font-bold;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
 }
