@@ -1,4 +1,5 @@
 import { getPosts } from "@/sanity/sanity-utils";
+import { PostLoader } from "../../post-loader";
 import Link from "next/link";
 
 export default async function Posts() {
@@ -6,9 +7,7 @@ export default async function Posts() {
 
   return (
     <div className="flex flex-col">
-      <h2 className="self-start pl-1 text-4xl text-zinc-400 font-semibold">
-        Posts
-      </h2>
+      <h1 className="self-start pl-1">Posts</h1>
 
       <ul>
         {posts.map((post) => (
@@ -20,15 +19,13 @@ export default async function Posts() {
               <p className="text-md min-w-[70px]">
                 {post._createdAt.toString().substring(5, 10)}
               </p>
-              <h3 className="px-2 text-xl w-full bg-slate-800 backdrop-blur-md rounded-sm">
-                {post.name}
-              </h3>
+              <h2 className="px-2 w-full bg-abyss2 rounded-sm">{post.name}</h2>
             </Link>
             <div className="flex justify-end pl-6">
               {post.tags.map((tag, index) => (
                 <small
                   key={index}
-                  className="px-1 mx-1 mt-4 rounded-sm bg-gray-900"
+                  className="px-1 mx-1 mt-4 rounded-sm bg-abyss1"
                 >
                   {`#${tag}`}
                 </small>
