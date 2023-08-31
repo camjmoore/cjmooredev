@@ -10,10 +10,12 @@ module.exports = {
       backgroundImage: {
         "noise2-bg": "url('/allNoise512.png')",
         "noise-bg": "url('/noisebg.svg')",
+        "gradient-circle": "url('/gradientCircle.svg')",
         spectrum: "url('/spectrum.png')",
       },
       colors: {
-        ignis: "#fb923c",
+        ignis1: "#fb923c",
+        ignis2: "#f97316",
         epis: "#2aa198",
         mesos: "#268bd2",
         bathys1: "#002b36",
