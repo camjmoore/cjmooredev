@@ -1,7 +1,8 @@
 import "../globals.css";
 import localFont from "@next/font/local";
+import Station from "../station";
+import Nav from "../navigation";
 import Header from "../header";
-import Nav from "../nav-bar";
 
 export const metadata = {
   title: "Portfolio and blog",
@@ -44,8 +45,8 @@ export default function RootLayout({
       lang="en"
     >
       <body className="bg-no-repeat bg-spectrum bg-top min-h-screen">
-        <Nav />
         <Header />
+        <Station />
         <div className="sm:px-8">
           <div className="mx-auto max-w-5xl lg:px-12">
             <div className="relative px-4 sm:px-8 lg:px-12">
