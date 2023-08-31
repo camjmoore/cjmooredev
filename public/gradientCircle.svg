@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+   <defs>
+      
+      <linearGradient id='b' gradientUnits='objectBoundingBox' x1='0' y1='1' x2='1' y2='1'>
+         <stop offset='0' stop-color='#CCE0F2ff'>
+            <animate attributeName="stop-color"
+               values="#CCE0F2ff;#123440;#CCE0F2ff;" dur="1000s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <stop offset='1' stop-color='#4EA1B9ff' stop-opacity="0">
+            <animate attributeName="stop-color"
+               values="#123440;#CCE0F2ff;" dur="1000s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <animateTransform attributeName="gradientTransform" type="rotate" values="0 .5 .5;360 .5 .5" class="ignore"
+            dur="1000s" repeatCount="indefinite" />
+      </linearGradient>
+   </defs>
+   <circle fill='url(#a)' cx='900' cy='550' r='300'/>
+   <circle fill='url(#b)' cx='900' cy='550' r='300'/>
+</svg>
